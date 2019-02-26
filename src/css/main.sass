@@ -1,299 +1,212 @@
 @import 'bootstrap.min.css'
 @import 'animate.css'
 
-$primary-color: #3d659a
-$secondary-color: #3d659a
-$muted-color: #e0ebf3
-
-body
-  background: #fbfbfb !important
-
+$primary-color: #e35b5f
+$secondary-color: #5dd2d9
+$skew-margin: 5.5rem
 @media (max-width: 767px)
   html
-    font-size: 0.83rem !important
+    font-size: 0.7rem !important
 
-.color-primary
+.text-red
   color: $primary-color !important
 
-.color-secondary
+.text-blue
   color: $secondary-color !important
 
-.bg-color-primary
+.bg-red
   background-color: $primary-color !important
 
-.bg-color-secondary
+.bg-blue
   background-color: $secondary-color !important
 
-@font-face
-  font-family: 'ALS'
-  src: url("../fonts/ALS Schlange Sans.otf")
-  font-weight: normal
 
 @font-face
-  font-family: 'ALS'
-  src: url("../fonts/ALS Schlange Sans Bold.otf")
-  font-weight: 700
+  font-family: 'Teko'
+  src: url("../fonts/Teko-Light.ttf")
+  font-weight: 100
 
 @font-face
-  font-family: 'ALS'
-  src: url("../fonts/ALS Schlange Sans Black.otf")
-  font-weight: 900
-
-@font-face
-  font-family: 'ALS'
-  src: url("../fonts/ALS Schlange Sans Light.otf")
+  font-family: 'Teko'
+  src: url("../fonts/Teko-Medium.ttf")
   font-weight: 300
 
 @font-face
-  font-family: 'ALS'
-  src: url("../fonts/ALS Schlange Sans Thin.otf")
-  font-weight: 100
-
-html, p, a, span, b, strong, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
-  font-family: 'ALS', sans-serif !important
+  font-family: 'Teko'
+  src: url("../fonts/Teko-Regular.ttf")
   font-weight: normal
+
+@font-face
+  font-family: 'Teko'
+  src: url("../fonts/Teko-SemiBold.ttf")
+  font-weight: 700
+
+@font-face
+  font-family: 'Teko'
+  src: url("../fonts/Teko-Bold.ttf")
+  font-weight: 900
+
+
+html, body, div, p, a, span, b, strong, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+  font-family: 'Teko', sans-serif !important
+
+textarea, select, input, button
+  outline: none!important
+
 
 .btn
   word-wrap: break-word !important
   white-space: normal !important
 
-b, strong
-  font-weight: 700
+.bold, b, strong
+  font-weight: 900
 
-.navbar
-  background: #ffffff !important
+.semibold
+  font-weight: 700!important
 
-  li
-    &:hover
-      background: #e4e4e4
+.light
+  font-weight: 100!important
 
-.navbar__bordered_bottom
-  border-bottom: 5px solid $primary-color
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
-
-.navbar-item__bordered-left
-  box-sizing: padding-box
-
-@media (min-width: 768px)
-
-  .navbar-item__bordered-left
-    border-left: 1px solid $muted-color
-
-.presentation-block
+.skew-block
   position: relative
+  transform: skew(0deg, -5deg)
+  padding: $skew-margin 0
+  -webkit-backface-visibility: hidden
+  outline: 1px solid transparent
+
+  .skew-content
+    transform: skew(0deg, 5deg)
+    -webkit-backface-visibility: hidden
+
+
+.block1
+  margin-top: -$skew-margin
+  background: url("../img/bg1.png") center center no-repeat
+  background-size: cover
+
+  .content
+    background: rgba(93,210,217,0.8)
+    padding-bottom: $skew-margin*2
+    margin-bottom: -$skew-margin*2
+
+  .rob
+    position: absolute
+    height: 100%
+    width: 100%
+    background: url("../img/rob.png") bottom center
+    background-size: auto 80%
+    background-repeat: no-repeat
+
+.block2
+  background:
+    image: linear-gradient(rgba(227, 91, 95, 0.8), rgba(227, 91, 95, 0.8)), url('../img/bg2.png')
+  background-size: cover
+  background-position: center center
+  background-repeat: no-repeat
+
+  .content
+    min-height: 800px
+    padding-bottom: $skew-margin*2
+    margin-bottom: -$skew-margin*2
+
+    @media (max-width: 767px)
+      min-height: 650px
+      padding-bottom: $skew-margin*2
+      margin-bottom: -$skew-margin*2
+
+  .gibraltar
+    position: absolute
+    height: 100%
+    width: 100%
+    background: url("../img/gibraltar.png") top left
+    background-size: 35% auto
+    background-repeat: no-repeat
+    z-index: -1
+
+  .reif
+    position: absolute
+    height: 100%
+    width: 100%
+    background: url("../img/reif.png") top left
+    background-size: 35% auto
+    background-repeat: no-repeat
+    z-index: -1
+
+.block3
+  background:
+    image: linear-gradient(rgba(93,210,217,0.8), rgba(93,210,217,0.8)), url('../img/bg2.png')
+  background-size: cover
+  background-position: center center
+  background-repeat: no-repeat
   overflow: hidden
 
-.bg
+  .content
+    padding-bottom: $skew-margin*2
+    margin-bottom: -$skew-margin*2
+
+  .bloodhound
+    position: absolute
+    height: 100%
+    width: 100%
+    background: url("../img/bloodhound.png") top right
+    background-size: 40% auto
+    background-repeat: no-repeat
+    z-index: -1
+
+.block4
+  background: white
+  padding-top: $skew-margin
+
+.menu
+  background: rgba(227, 91, 95, 0.8)
+
+  .menu__logo
+    height: 40px
+    width: auto
+
+  .menu__links
+    .menu__link
+      margin-bottom: -0.5em
+      padding-bottom: 2em
+      text-decoration: none!important
+      color: black
+      p
+        margin-bottom: 0!important
+        font-weight: 700!important
+
+      &:hover
+        background: rgba(227, 91, 95, 1)!important
+
+
+.social-icons
   position: absolute
-  top: 0
-  left: 0
-  z-index: -1
-  width: 100%
-  height: 100%
-  animation: zoomBg 50s linear infinite !important
-  background-size: 200% auto
-  background-position: center center
+  right: 0
+  top: 40%
+  background: $primary-color
 
-@keyframes zoomBg
-  0%
-    transform: scale(1.0)
 
-  50%
-    transform: scale(1.2)
+.custom-input
+  border: 3px solid white
+  background: rgba(0,0,0,0)
+  font-size: 1.7em
+  color: black!important
+  letter-spacing: .25rem
 
-  100%
-    transform: scale(1.0)
-
-.bg-1
-  background: url('../img/bg-1.png') center center
-
-.bg-2
-  background: url('../img/bg-2.png') center center
-
-.bg-3
-  background: url('../img/bg-3.png') center center
-
-.bg-4
-  background: url('../img/bg-4.png') center center
-
-.bg-5
-  background: url('../img/bg-5.png') center center
-
-.bg-6
-  background: url('../img/bg-6.png') center center
-
-.bg-effect
-  position: absolute
-  top: 0
-  left: 0
-  z-index: -1
-  width: 100%
-  height: 100%
-  background-size: 200% 200% !important
-  animation: Gradient 8s ease infinite !important
-  background: linear-gradient(-45deg, rgba(25, 37, 107, 0.45), rgba(32, 101, 163, 0.26), rgba(0, 0, 0, 0.51))
-
-@keyframes Gradient
-  0%
-    background-position: 0 50%
-
-  50%
-    background-position: 100% 50%
-
-  100%
-    background-position: 0 50%
+  &::placeholder
+    color: black!important
 
 .custom-button
-  background-color: $primary-color !important
-  border-radius: 50px !important
-  border: 2px solid rgba(255, 255, 255, 1) !important
-  transition: all 0.2s ease-in
-  box-sizing: content-box !important
+  font-size: 2rem
+  line-height: 2.8rem
+  border-radius: 7px
+  letter-spacing: .25rem
 
-  &:hover
-    background: -webkit-linear-gradient(left,#1e4ab7 -5%,#18baba 105%)
-
-.event-block
-  .event-block_title
-    width: 100%
-    font-weight: 700
-    background: $muted-color
-
-  .event-block_date
-    width: 100%
-    background: $primary-color
-    font-weight: 700
-    text-align: center
-    color: #FFFFFF
-
-.feedback-form-wrapper
-  background: #FFFFFF
-  border-radius: 20px
-  border: 2px solid $primary-color
-  position: relative
-  //box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
-
-  &_title
-    position: absolute
-    top: 0
-    left: 50%
-    color: $primary-color
-    transform: translate(-50%, -50%)
-    background: #FFFFFF
-
-.social-block a
-  opacity: 0.7
-
-  &:hover
-    opacity: 1
-
-
-.btn:focus,.btn:active
-  border: none !important
-  outline: none !important
-  box-shadow: none !important
-
-.btn-pagenav
-  border-radius: 30px
-  background: $primary-color
-  color: #FFFFFF
-  border: none !important
-  opacity: .9
-
-  &:hover
-    opacity: 1
-
-.btn-navigate
-  border-radius: 30px
-  color: #FFFFFF !important
-  background: rgba(255, 255, 255, .25)
-  font-size: 1.1rem!important
-  white-space: nowrap!important
-
-  &:hover
-    color: #FFFFFF !important
-    background: rgba(255, 255, 255, .4)
-
-@media (max-width: 768px)
-  .btn-navigate
-    width: 60% !important
-
-.contacts-block
-  a
-    color: inherit !important
-
-.bordered-img
-  border-radius: 20px
-
-.bordered-slider
-  border-radius: 0
-
-.feedback-img
+.contact-input
+  border: 3px solid #ebebeb
+  background: rgba(0,0,0,0)
+  font-size: 1.3em
+  color: black!important
+  letter-spacing: .25rem
   width: 100%
-  border: 3px solid $primary-color
-  border-radius: 50%
 
-.feedback-title-bg
-  position: absolute
-  height: 3.1em
-  width: 100px
-  top: 50px
-  left: 50px
-  background: $primary-color
-  z-index: -1
 
-.accordion_content-wrapper
-  background: white
-  border: 1px solid $primary-color
-  z-index: 0
-  min-height: 530px
-
-.accordion-title
-  cursor: pointer
-
-  &:not(.collapsed)
-    .accordion-title_number
-      background: $primary-color
-
-      p
-        color: white !important
-
-@media (min-width: 768px)
-  .accordion-title:not(.collapsed)
-    background: white
-    z-index: 999
-    overflow: hidden
-    position: relative
-    margin-right: -1px
-    border: 1px solid $primary-color
-    border-right: none
-
-.direction.collapsed .fa:before
-  content: "\f107"
-
-.direction .fa:before
-  content: "\f106"
-
-.sticky-step-nav
-  z-index: 999 !important
-
-.badge-custom
-  background: $primary-color !important
-  color: white
-
-.logo-container
-  border-radius: 20px
-  background: rgba(255,255,255,.2)
-
-.arrowTop
-  opacity: .9
-  position: fixed
-  right: 20px
-  bottom: 10px
-
-.question-image
-  width: 100%
-  height: 100%
-  background: url("../img/hands-up.jpg") center center
-  background-size: cover
-  border-radius: 20px
