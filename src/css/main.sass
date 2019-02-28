@@ -4,6 +4,12 @@
 $primary-color: #e35b5f
 $secondary-color: #5dd2d9
 $skew-margin: 5.5rem
+body
+  overflow: hidden!important
+html
+  overflow-y: scroll!important
+  overflow-x: hidden!important
+
 @media (max-width: 767px)
   html
     font-size: 0.7rem !important
@@ -53,7 +59,6 @@ html, body, div, p, a, span, b, strong, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .
 textarea, select, input, button
   outline: none!important
 
-
 .btn
   word-wrap: break-word !important
   white-space: normal !important
@@ -73,11 +78,11 @@ textarea, select, input, button
   padding: $skew-margin 0
   -webkit-backface-visibility: hidden
   outline: 1px solid transparent
+  overflow: hidden
 
   .skew-content
     transform: skew(0deg, 5deg)
     -webkit-backface-visibility: hidden
-
 
 .block1
   margin-top: -$skew-margin
@@ -195,6 +200,12 @@ textarea, select, input, button
   &::placeholder
     color: black!important
 
+  &:focus
+    outline: none!important
+    background: rgba(0,0,0,0)!important
+    -webkit-box-shadow: none
+    border: 3px solid white
+
 .custom-button
   font-size: 2rem
   line-height: 2.8rem
@@ -208,5 +219,15 @@ textarea, select, input, button
   color: black!important
   letter-spacing: .25rem
   width: 100%
+
+
+.g-recaptcha
+  transform-origin: left top
+  -webkit-transform-origin: left top
+
+.preload
+  background: url(../img/reif.png) no-repeat -9999px -9999px
+
+
 
 

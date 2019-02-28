@@ -111,17 +111,6 @@ if (empty($_POST["email"])) {
     $email = $_POST["email"];
 }
 
-// MESSAGE
-if (empty($_POST["message"])) {
-    $errorMSG .= "Введите текст вопроса ";
-} else {
-    $message = $_POST["message"];
-}
-
-if (empty($_POST["g-recaptcha-response"])) {
-    $errorMSG .= "Заполните reCAPTCHA ";
-}
-
 $secret = '6LcxQpQUAAAAAJwIkP_-juFvmo6rq4U7PGk3J-2K';
 $recaptcha = $_POST["g-recaptcha-response"];
 $response = null;
@@ -163,12 +152,19 @@ $mail->addAddress('playgaintourney@gmail.com');     // Кому будет ух�
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'New question';
-$mail->Body    = '' .$name . '(' . $email.') asks:<br> ' .$message;
+$mail->Subject = 'Here comes a new challenger!';
+$mail->Body    = '' .$name . '(' . $email.') whats to play!';
 $mail->AltBody = '';
+
+$mysqli = new mysqli('localhost', 'u0663678_default', 'keANP!q7', 'u0663678_default');
+$mysqli->set_charset("utf8");
+$sql = 'INSERT INTO `u0663678_default`.` user_requests` (`name`, `email`) VALUES (\'' . $name . '\', \'' . $email . '\');';
+$mysqli->query($sql);
+
 
 if ($mail->send() && $errorMSG == "") {
     echo "success";
+
 } else {
     if ($errorMSG == "") {
         echo "Что-то пошло не так :(";

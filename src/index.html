@@ -31,11 +31,78 @@
 
     <link rel="stylesheet" href="css/main.css">
 
+    <style>
+        body.preloader-site {
+            overflow: hidden;
+        }
+
+        .preloader-wrapper {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(-65deg, #e35b5f 50%, #5dd2d9 50%);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999999;
+        }
+
+        .preloader-wrapper .preloader {
+            height: 100%;
+            webkit-box-align: center !important;
+            -ms-flex-align: center !important;
+            align-items: center !important;
+            -webkit-box-pack: center !important;
+            -ms-flex-pack: center !important;
+            justify-content: center !important;
+            display: -webkit-box !important;
+            display: -ms-flexbox !important;
+            display: flex !important;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+
+        .preloader > div {
+            -webkit-box-align: center !important;
+            -ms-flex-align: center !important;
+            align-items: center !important;
+            -webkit-box-pack: center !important;
+            -ms-flex-pack: center !important;
+            justify-content: center !important;
+            display: -webkit-box !important;
+            display: -ms-flexbox !important;
+            display: flex !important;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .preloader img {
+            width: 300px;
+            height: auto;
+        }
+    </style>
+
 </head>
 
-<body>
+<body class="preloader-site">
 
-<div class="container-fluid skew-block block1" id="sign-up">
+<!-- Preloader-->
+<div class="preloader-wrapper">
+    <div class="preloader">
+        <div>
+            <img src="img/PlayGain_white.png" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid skew-block block1 mac-os-fix" style="overflow: hidden" id="sign-up">
     <div class="skew-content">
         <div class="rob d-none d-md-block">
         </div>
@@ -52,27 +119,28 @@
                 <div class="col-12 col-md-10 d-flex flex-row justify-content-between align-items-center">
                     <img src="img/PlayGain.png" class="menu__logo d-none d-md-block" alt="">
                     <div class="menu__links d-none d-md-flex flex-row justify-content-around align-items-center">
-                        <a href="#join-rules" class="menu__link px-1 py-2 py-md-4 px-md-3 rules-link easy-scroll">
+                        <a href="#join-rules" class="menu__link px-1 py-2 py-md-4 px-md-3 rules-link1">
                             <p class="h5">RULES</p>
                         </a>
                         <a href="#win-conditions" class="menu__link px-1 py-2 py-md-4 px-md-3 easy-scroll">
                             <p class="h5">WIN CONDITIONS</p>
                         </a>
-                        <a href="#join-rules" class="menu__link px-1 py-2 py-md-4 px-md-3 join-link easy-scroll">
+                        <a href="https://discord.gg/sDbrkrZ" class="menu__link px-1 py-2 py-md-4 px-md-3 join-link" target="_blank">
                             <img src="img/discord.png" alt="" style="height: 1.7rem">
                         </a>
                         <a href="#contact-us" class="menu__link px-1 py-2 py-md-4 px-md-3 easy-scroll">
                             <p class="h5">CONTACT US</p>
                         </a>
                     </div>
-                    <div class="menu__links d-flex d-md-none flex-row justify-content-around align-items-center" style="width: 100%">
-                        <a href="#join-rules" class="menu__link px-1 py-2 py-md-4 px-md-3 rules-link easy-scroll">
+                    <div class="menu__links d-flex d-md-none flex-row justify-content-around align-items-center"
+                         style="width: 100%">
+                        <a href="#join-rules" class="menu__link px-1 py-2 py-md-4 px-md-3 rules-link2">
                             <p class="h5">RULES</p>
                         </a>
                         <a href="#win-conditions" class="menu__link px-1 py-2 py-md-4 px-md-3 easy-scroll">
                             <p class="h5">WIN CONDITIONS</p>
                         </a>
-                        <a href="#join-rules" class="menu__link px-1 py-2 py-md-4 px-md-3 join-link easy-scroll">
+                        <a href="https://discord.gg/sDbrkrZ" class="menu__link px-1 py-2 py-md-4 px-md-3 join-link easy-scroll" target="_blank">
                             <img src="img/discord.png" alt="" style="height: 1.7rem">
                         </a>
                         <a href="#contact-us" class="menu__link px-1 py-2 py-md-4 px-md-3 easy-scroll">
@@ -86,7 +154,8 @@
             <div class="container py-5">
                 <div class="row pt-5">
                     <div class="col-12 col-md-6 mb-5 mb-md-1">
-                        <p class="display-3 bold d-none d-md-block" style="line-height: 4rem!important;letter-spacing: .3rem!important;">
+                        <p class="display-3 bold d-none d-md-block"
+                           style="line-height: 4rem!important;letter-spacing: .3rem!important;">
                             PLAYGAIN APEX <br>
                             TOURNAMENT #1
                         </p>
@@ -99,29 +168,49 @@
                         </p>
 
                         <p class="h3 semibold">
-                            Platform - PC
+                            Platform <span style="font-weight: normal!important;">:</span> PC
                         </p>
                         <p class="h3 semibold">
-                            Region - EU, CIS, NA
+                            Region <span style="font-weight: normal!important;">:</span> EU, CIS, NA
+                        </p>
+                        <p class="h3 semibold">
+                            Prize Pool <span style="font-weight: normal!important;">:</span> $1000
                         </p>
                         <br>
-                        <br>
                         <p class="h4 light">
-                            We are pleased to announce the launch of <br>Apex Legends Tournaments series by PlayGain.
+                            We are pleased to announce the launch of <br>
+                            Apex Legends Tournaments series by PlayGain.
                             <br><br>
-                            Grapple your teammates and join the battle<br> for theprize pool of $1000. Challenge your
-                            skills and let<br> the competitive nature go wild. <br><br>
+                            Grapple your teammates and join the battle. <br>
+                            Challenge your skills and let the competitive <br>nature go wild.  <br><br>
                             Any team is free to enter.
                         </p>
                     </div>
                     <div class="col-12 col-md-6 d-flex flex-row justify-content-start justify-content-md-end align-items-end">
-                        <form action="" class="mb-0 mb-md-5">
-                            <input type="email" name="email" placeholder="Email Adress"
-                                   class="custom-input py-2 px-4 mb-3"><br>
-                            <input type="text" name="name" placeholder="Name" class="custom-input py-2 px-4 mb-4"><br>
-                            <button type="submit" class="btn custom-button px-4 py-1 text-white bg-red">
+                        <form role="form" id="registrationForm" data-toggle="validator" action="" class="mb-0 mb-md-5">
+                            <div class="form-group">
+
+                                <input id="regEmail" type="email" name="email" placeholder="Email Adress"
+                                       class="custom-input py-2 px-4 mb-3 form-control" required>
+                            </div>
+                            <div class="form-group">
+
+                                <input id="regName" type="text" name="name" placeholder="Name"
+                                       class="custom-input py-2 px-4 mb-2 form-control" required>
+                            </div>
+                            <div class="g-recaptcha" data-sitekey="6LcxQpQUAAAAADtZhpBTTD8P_xvW4pj7-OTTTF1e"
+                                 style="transform:scale(0.85);-webkit-transform:scale(0.85);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
+                            <div class="form-check mb-3">
+                                <input type="checkbox" class="form-check-input my-1" id="exampleCheck2" required
+                                       checked>
+                                <label class="form-check-label small" for="exampleCheck1">I have read and agree to the
+                                    <a href="privacy-policy.html"
+                                       class="color-primary">Privacy Policy</a></label>
+                            </div>
+                            <button type="submit" class="btn custom-button px-4 py-1 text-white bg-red mb-2">
                                 SUBMIT!
                             </button>
+                            <div id="regSubmit" class="h4 hidden text-red"></div>
                         </form>
                     </div>
                 </div>
@@ -130,7 +219,7 @@
     </div>
 </div>
 
-<div class="container-fluid skew-block block2" id="join-rules">
+<div class="container-fluid skew-block block2">
     <div class="skew-content">
         <div id="carousel-rules" class="carousel slide" data-ride="carousel"
              style="margin-bottom: -200px;padding-bottom: 200px">
@@ -140,14 +229,14 @@
                     </div>
                     <div class="container content d-flex flex-row justify-content-end">
                         <div class="">
-                            <p class="h1 semibold mt-1 mb-5" style="line-height:2rem;letter-spacing: .3rem">
+                            <p class="h1 semibold pt-5 mt-1 mb-5" style="line-height:2rem;letter-spacing: .3rem">
                                 HOW TO JOIN THE COMPETITION <br>
                                 <span style="letter-spacing: -.1rem">___</span>
                             </p>
 
                             <div class="row mb-4">
                                 <div class="col-4 col-md-2">
-                                    <img src="img/ok-mark.png" alt="" style="height: 50px">
+                                    <img src="img/ok-mark.png" alt="" style="height: 50px;opacity: 0.75">
                                 </div>
                                 <div class="col-8 col-md-10 d-flex flex-row align-items-center">
                                     <p class="h2 mb-0">Sign up for the tournament</p>
@@ -155,15 +244,15 @@
                             </div>
                             <div class="row mb-4">
                                 <div class="col-4 col-md-2">
-                                    <img src="img/discord-mark.png" alt="" style="height: 40px">
+                                    <img src="img/discord-mark.png" alt="" style="height: 40px;opacity: 0.75">
                                 </div>
                                 <div class="col-8 col-md-10 d-flex flex-row align-items-center">
-                                    <p class="h2 mb-0">Join the discord</p>
+                                    <p class="h2 mb-0">Join the <a href="https://discord.gg/sDbrkrZ" class="" target="_blank" style="color: black">Discord</a></p>
                                 </div>
                             </div>
                             <div class="row mb-5">
                                 <div class="col-4 col-md-2">
-                                    <img src="img/promotion-mark.png" alt="" style="height: 60px">
+                                    <img src="img/promotion-mark.png" alt="" style="height: 60px;opacity: 0.75">
                                 </div>
                                 <div class="col-8 col-md-10 d-flex flex-row align-items-center">
                                     <p class="h2 mb-0">Wait for the announces</p>
@@ -183,7 +272,7 @@
                     </div>
                     <div class="container content d-flex flex-row justify-content-end">
                         <div class="">
-                            <p class="h1 semibold mt-1 mb-5" style="line-height:2rem;letter-spacing: .3rem">
+                            <p id="join-rules" class="h1 semibold pt-5 mt-1 mb-5" style="line-height:2rem;letter-spacing: .3rem">
                                 SPECIFIC TOURNAMENT #1 RULES <br>
                                 <span style="letter-spacing: -.1rem">___</span>
                             </p>
@@ -194,7 +283,9 @@
                                 1. Each participant must have their "Kills", "Damage" and "Games played" <br>stat
                                 tracker added to their banner on any legend they are going to play.
                                 <br><br>
-                                2. Register with the in-game nickname or PM any support in our <a href="https://discord.gg/sDbrkrZ" target="_blank" style="text-decoration: underline;color: black;">Discord</a> <br> with
+                                2. Register with the in-game nickname or PM any support in our <a
+                                    href="https://discord.gg/sDbrkrZ" target="_blank"
+                                    style="text-decoration: underline;color: black;">Discord</a> <br> with
                                 the nickname change request.
                                 <br><br>
                                 3. Get the screenshots of the end-game screen after every match you<br> played during
@@ -211,13 +302,13 @@
     </div>
 </div>
 
-<div class="container-fluid skew-block block3" id="win-conditions">
+<div class="container-fluid skew-block block3">
     <div class="skew-content">
         <div class="bloodhound d-none d-md-block">
         </div>
         <div class="container content d-flex flex-row justify-content-start">
-            <div class="">
-                <p class="h1 semibold mt-1 mb-5" style="line-height:2rem;letter-spacing: .3rem">
+            <div class="mt-md-5">
+                <p id="win-conditions" class="h1 semibold pt-5 mt-1 mb-5" style="line-height:2rem;letter-spacing: .3rem">
                     WIN CONDITIONS <br>
                     <span style="letter-spacing: -.1rem">___</span>
                 </p>
@@ -264,48 +355,68 @@
     </div>
 </div>
 
-<div class="container-fluid block4" id="contact-us">
+<div class="container-fluid block4">
     <div class="container">
-        <p class="h1 bold mt-1 mb-5 text-center" style="line-height:2rem;letter-spacing: .3rem">
+        <p id="contact-us" class="h1 bold pt-5 mt-1 mb-5 text-center" style="line-height:2rem;letter-spacing: .3rem">
             CONTACT US <br>
             <span style="letter-spacing: -.1rem">___</span>
         </p>
         <div class="row">
             <div class="col-12 col-md-8">
-                <form action="">
+                <form role="form" id="contactForm" data-toggle="validator">
                     <div class="row mb-4">
                         <div class="col-12 col-md-6 mb-4 mb-md-0">
-                            <input type="text" name="name" placeholder="Your Name" class="contact-input px-3 py-2">
+                            <input id="name" type="text" name="name" placeholder="Your Name"
+                                   class="contact-input px-3 py-2 form-control" data-error="Input correct Name"
+                                   required>
+                            <div class="help-block with-errors text-danger small"></div>
                         </div>
                         <div class="col-12 col-md-6">
-                            <input type="email" name="email" placeholder="Email Address"
-                                   class="contact-input px-3 py-2">
+                            <input id="email" type="email" name="email" placeholder="Email Address"
+                                   class="contact-input px-3 py-2 form-control" data-error="Input correct Email"
+                                   required>
+                            <div class="help-block with-errors text-danger small"></div>
+
                         </div>
                     </div>
-                    <textarea name="message" placeholder="Message" class="contact-input px-3 py-2 mb-4"
-                              rows="6"></textarea>
-
-                    <button type="submit" class="btn custom-button px-4 py-1 bg-red text-white mb-4 mb-md-0">
+                    <textarea id="message" name="message" placeholder="Message"
+                              class="contact-input form-control px-3 py-2 mb-4"
+                              rows="6" required></textarea>
+                    <div class="help-block with-errors text-danger small"></div>
+                    <div class="form-group">
+                        <div class="g-recaptcha" data-sitekey="6LcxQpQUAAAAADtZhpBTTD8P_xvW4pj7-OTTTF1e"
+                             style="transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input my-1" id="exampleCheck1" required
+                               checked>
+                        <label class="form-check-label small" for="exampleCheck1">I have read and agree to the <a
+                                href="privacy-policy.html"
+                                class="color-primary">Privacy Policy</a></label>
+                    </div>
+                    <button type="submit" id="form-submit"
+                            class="btn custom-button px-4 py-1 bg-red text-white mb-4 mb-md-3">
                         SUBMIT!
                     </button>
+                    <div id="msgSubmit" class="h4 hidden text-red"></div>
                 </form>
             </div>
             <div class="col-12 col-md-4 pl-md-5">
                 <div class="row mb-4">
                     <div class="col-2">
-                        <i class="fas fa-2x fa-map-marker-alt text-red"></i>
+                        <i class="fas fa-2x fa-envelope text-red"></i>
                     </div>
-                    <div class="col-10">
-                        <p class="h5 mb-0 text-secondary">65, Prothemers Tower-1200 D <br>
-                            Block Comilla, Bangladesh</p>
+                    <div class="col-10 d-flex flex-row align-items-center">
+                        <a href="mailto:playgaintourney@gmail.com" class="h5 mb-0 text-secondary">playgaintourney@gmail.com</a>
                     </div>
                 </div>
+                <!--
                 <div class="row mb-4">
                     <div class="col-2">
                         <i class="far fa-2x fa-envelope text-red"></i>
                     </div>
                     <div class="col-10">
-                        <p class="h5 mb-0 text-secondary">Info@Addaxx.com</p>
+                        <a class="h5 mb-0 text-secondary">playgaintourney@gmail.com</p>
                     </div>
                 </div>
                 <div class="row mb-4">
@@ -316,6 +427,7 @@
                         <p class="h5 mb-0 text-secondary">+8805-5823-582</p>
                     </div>
                 </div>
+                -->
                 <div class="row mb-4">
                     <div class="col-2">
                         <a href="https://discord.gg/sDbrkrZ" target="_blank">
@@ -339,7 +451,7 @@
         <div class="col-12 col-md-10 d-flex flex-row justify-content-between align-items-center">
             <img src="img/PlayGain.png" alt="" style="height: 2.5rem">
             <p class="h5 mb-0">
-                by Light Marketing
+                <a href="https://lightmarketingrus.com" target="_blank" style="color: black;">by Light Marketing</a>
             </p>
             <div>
                 <a href="https://discord.gg/sDbrkrZ" target="_blank" class="mr-3">
@@ -352,7 +464,9 @@
         </div>
     </div>
 </div>
+<div class="preload"></div>
 <!--Scripts-->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="js/main.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.6.1/js/all.js"
         integrity="sha384-R5JkiUweZpJjELPWqttAYmYM1P3SNEJRM6ecTQF05pFFtxmCO+Y1CiUhvuDzgSVZ"
@@ -372,12 +486,34 @@
             e.preventDefault();
             $('.carousel').carousel('prev');
         });
-        $('.rules-link').click(function (e) {
+        $('.rules-link1').click(function (e) {
             $('.carousel').carousel(1);
+
+            $("html, body").animate({
+                scrollTop: $('#join-rules').offset().top - 12 + "px"
+            }, {
+                duration: 500,
+                easing: "swing"
+            });
+            return false;
         });
-        $('.join-link').click(function (e) {
-            $('.carousel').carousel(0);
+        $('.rules-link2').click(function (e) {
+            $('.carousel').carousel(1);
+
+            $("html, body").animate({
+                scrollTop: $('#join-rules').offset().top - 12 + "px"
+            }, {
+                duration: 500,
+                easing: "swing"
+            });
+            return false;
         });
+    });
+    $(document).ready(function($) {
+        setTimeout(function () {
+            $('.preloader-wrapper').fadeOut();
+            $('body').removeClass('preloader-site');
+        }, 1000);
     });
 
 </script>
